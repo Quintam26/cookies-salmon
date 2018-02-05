@@ -1,7 +1,6 @@
 'use strict';
 
-
-/* 
+/*
 Sales
 
 -The minimum number of customers per hour.
@@ -14,13 +13,16 @@ const sales = {
     minCust: '23',
     maxCust: '65',
     avgCookieSale: 6.3,
-//methods
-function getRandomInt(min, max) {
-    min = Math.ceil(3);
-    max = Math.floor(24);
-    return Math.floor(Math.random() * (max - min)) + min;
-  };
+    //methods
+    getRandomInt: function(23, 65) {
+        alert(this.minCust);
+        return Math.random();
+       
+
+    }
 };
+
+sales.getRandomInt();
 
 const sales2 = {
 //properties
@@ -59,3 +61,7 @@ const sales5 = {
     avgCookieSale: 4.6,
 //methods
 };
+
+function newFunction(max, min) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
