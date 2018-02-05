@@ -14,10 +14,8 @@ const sales = {
     maxCust: '65',
     avgCookieSale: 6.3,
     //methods
-    getRandomInt: function(23, 65) {
-        alert(this.minCust);
-        return Math.random();
-       
+    getRandomInt: function() {
+        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
 
     }
 };
