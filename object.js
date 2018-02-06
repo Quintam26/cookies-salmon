@@ -17,12 +17,14 @@ const sales = {
     //methods
 
     getRandomInt: function() {
-        const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-        console.log(custPerHour);
-        const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
-        console.log(cookiePerHour);
-        this.cookiesArray.push(cookiePerHour);
-       
+        let i = 0;
+        for (i = 0; i < 15; i++);{
+            const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+            console.log(custPerHour);
+            const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+            console.log(cookiePerHour);
+            this.cookiesArray.push(cookiePerHour);
+        }
     }
 
 };
