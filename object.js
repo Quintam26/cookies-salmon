@@ -14,9 +14,10 @@ const sales = {
     maxCust: '65',
     avgCookieSale: '6.3',
     cookiesArray: [],
+    time: ['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:','8pm:'],
     //methods
 
-    getRandomInt: function() {
+    getRandomCookies: function() {
         let i = 0;
         for (i = 0; i < 15; i++);{
             const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
@@ -25,11 +26,16 @@ const sales = {
             console.log(cookiePerHour);
             this.cookiesArray.push(cookiePerHour);
         }
+    },
+
+    totalCookies: function(){
+
+
     }
 
 };
 
-sales.getRandomInt();
+sales.getRandomCookies();
 
 
 const sales2 = {
