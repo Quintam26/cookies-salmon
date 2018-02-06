@@ -17,13 +17,18 @@ const sales = {
     //methods
 
     getRandomInt: function() {
-        const totalRandom = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-        const cookie = (this.avgCookieSale * totalRandom);
-        this.cookiesArray.push(cookie);
+        const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+        console.log(custPerHour);
+        const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+        console.log(cookiePerHour);
+        this.cookiesArray.push(cookiePerHour);
+       
     }
+
 };
 
 sales.getRandomInt();
+
 
 const sales2 = {
 //properties
@@ -37,7 +42,7 @@ const sales2 = {
     }
 };
 
-sales2.getRandomInt2();
+//sales2.getRandomInt2();
 
 const sales3 = {
 //porperties
@@ -52,7 +57,7 @@ const sales3 = {
 
 };
 
-sales3.getRandomInt3();
+//sales3.getRandomInt3();
 
 const sales4 = {
 //properties
@@ -67,7 +72,7 @@ const sales4 = {
 
 };
 
-sales4.getRandomInt4 ();
+//sales4.getRandomInt4 ();
 
 const sales5 = {
 //properties
@@ -82,6 +87,6 @@ const sales5 = {
 
 };
 
-sales5.getRandomInt5();
+//sales5.getRandomInt5();
 
 
