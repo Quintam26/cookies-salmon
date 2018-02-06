@@ -12,11 +12,13 @@ const sales = {
     Location: 'PDX Airport',
     minCust: '23',
     maxCust: '65',
-    avgCookieSale: 6.3,
+    avgCookieSale: '6.3',
+    cookiesArray: [],
     //methods
-    getRandomInt: function() {
-        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
 
+    getRandomInt: function() {
+        console.log(this.avgCookieSale * (this.minCust * this.maxCust));
+        console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
     }
 };
 
