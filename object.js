@@ -37,12 +37,17 @@ const sales = {
 
     }*/
 
-    renderCookies: function(){
+    createCookiesList: function(){
+        const newList = document.createElement('li');
+        const list = document.getElementById(parent);
+
+        console.log(newList);
 
     }
 };
 
 sales.getRandomCookies();
+sales.createCookiesList();
 //sales.cookiesPerDay();
 
 
