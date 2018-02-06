@@ -38,18 +38,22 @@ const sales = {
     }*/
 
     createCookiesList: function(){
-        const newList = document.createElement('li');
-        const list = document.getElementById(parent);
+        let i = 0;
+        for (i = 0; i < 15; i++);{
+            const parent = document.getElementById('parent');
+            const list = document.createElement('li');
+            list.textContent = this.time[i] + this.cookiePerHour[i];
+            parent.appendChild(list);
+            console.log(list);
 
-        console.log(newList);
-
+        }
     }
 };
 
 sales.getRandomCookies();
 sales.createCookiesList();
 //sales.cookiesPerDay();
-
+/*
 
 const sales2 = {
 //properties
@@ -110,4 +114,4 @@ const sales5 = {
 
 //sales5.getRandomInt5();
 
-
+*/
