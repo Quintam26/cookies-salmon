@@ -28,8 +28,13 @@ const sales2 = {
     minCust: '3',
     maxCust: '24',
     avgCookieSale: 1.2,
-//methods
+    //methods
+    getRandomInt2: function() {
+        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+    }
 };
+
+sales2.getRandomInt2();
 
 const sales3 = {
 //porperties
@@ -37,9 +42,14 @@ const sales3 = {
     minCust: '11',
     maxCust: '38',
     avgCookieSale: 3.7,
-//methods
+    //methods
+    getRandomInt3: function() {
+        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+    }
 
 };
+
+sales3.getRandomInt3();
 
 const sales4 = {
 //properties
@@ -47,9 +57,14 @@ const sales4 = {
     minCust: '20',
     maxCust: '38',
     avgCookieSale: 2.3,
-//methods
+    //methods
+    getRandomInt4: function() {
+        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+    }
 
 };
+
+sales4.getRandomInt4 ();
 
 const sales5 = {
 //properties
@@ -57,9 +72,13 @@ const sales5 = {
     minCust: '2',
     maxCust: '16',
     avgCookieSale: 4.6,
-//methods
+    //methods
+    getRandomInt5: function() {
+        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+    }
+
 };
 
-function newFunction(max, min) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
+sales5.getRandomInt5();
+
+
