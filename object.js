@@ -25,10 +25,11 @@ const sales = {
             const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
             console.log(cookiePerHour);
             this.cookiesArray.push(cookiePerHour);
+            console.log(this.time[2]);
         }
     },
 
-   /* cookiesPerDay: function(){
+    /* cookiesPerDay: function(){
         let i = 0;
         for (i = 0; i < 15; i++){
 
@@ -36,11 +37,13 @@ const sales = {
 
     }*/
 
-    
+    renderCookies: function(){
+
+    }
 };
 
 sales.getRandomCookies();
-sales.cookiesPerDay();
+//sales.cookiesPerDay();
 
 
 const sales2 = {
