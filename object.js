@@ -17,8 +17,9 @@ const sales = {
     //methods
 
     getRandomInt: function() {
-        console.log(this.avgCookieSale * (this.minCust * this.maxCust));
-        console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+        const totalRandom = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+        const cookie = (this.avgCookieSale * totalRandom);
+        this.cookiesArray.push(cookie);
     }
 };
 
