@@ -15,8 +15,8 @@ const sales = {
     avgCookieSale: '6.3',
     cookiesArray: [],
     time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
-    //methods
 
+    //methods
     getRandomCookies: function() {
         for (let i = 0; i < 15; i++) {
             const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
@@ -33,7 +33,7 @@ const sales = {
         for (let i = 0; i < this.cookiesArray.length; i++) {
             totalCookies += this.cookiesArray[i];
             //console.log('this total cookies', totalCookies);
-            
+
         }
         this.cookiesArray.push(totalCookies);
 
@@ -49,7 +49,6 @@ const sales = {
             console.log(this.cookiesArray);
             console.log(i); */
 
-
         }
     }
 };
@@ -58,8 +57,7 @@ sales.getRandomCookies();
 sales.cookiesPerDay();
 sales.createCookiesList();
 
-//sales.cookiesPerDay();
-/*
+
 
 const sales2 = {
 //properties
@@ -120,4 +118,4 @@ const sales5 = {
 
 //sales5.getRandomInt5();
 
-*/
+
