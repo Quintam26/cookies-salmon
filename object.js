@@ -1,13 +1,14 @@
 'use strict';
 
 
-function Sale(Location, minCust, maxCust, avgCookieSale) {
+function Sale(Location, minCust, maxCust, avgCookieSale, cookiesArray, time, id) {
     this.Location = Location;
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.avgCookieSale = avgCookieSale;
     this.cookiesArray = [];
     this.time = [];
+    this.id = id;
 };
 //methods
 
@@ -40,7 +41,7 @@ Sale.prototype.createCookiesList = function() {
 };
 
 
-const sale = new Sale ('PDX Airport', '23', '65', '6.3');
+const sale = new Sale ('PDX Airport', '23', '65', '6.3', [], [], 'pdx airport');
 console.log(sale);
 
 /*
