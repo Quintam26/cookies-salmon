@@ -14,7 +14,7 @@ const sales = {
     maxCust: '65',
     avgCookieSale: '6.3',
     cookiesArray: [],
-    time: ['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:','8pm:'],
+    time: ['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:','8pm:', 'Total'],
     //methods
 
     getRandomCookies: function() {
@@ -28,13 +28,12 @@ const sales = {
         }
     },
 
-    /* cookiesPerDay: function(){
-        let i = 0;
-        for (i = 0; i < 15; i++){
+    cookiesPerDay: function(){
+        for (let i = 0; i < 15; i++) {
 
         }
 
-    }*/
+    },
 
     createCookiesList: function(){
         for (let i = 0; i < 15; i++) {
@@ -42,9 +41,9 @@ const sales = {
             const list = document.createElement('li');
             list.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
             parent.appendChild(list);
-            console.log(list);
+        /* console.log(list);
             console.log(this.cookiesArray);
-            console.log(i);
+            console.log(i); */
 
 
         }
