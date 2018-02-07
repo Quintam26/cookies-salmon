@@ -65,6 +65,8 @@ const sales2 = {
     minCust: '3',
     maxCust: '24',
     avgCookieSale: 1.2,
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
     getRandomInt2: function() {
         return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
@@ -79,6 +81,8 @@ const sales3 = {
     minCust: '11',
     maxCust: '38',
     avgCookieSale: 3.7,
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
     getRandomInt3: function() {
         return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
@@ -94,6 +98,8 @@ const sales4 = {
     minCust: '20',
     maxCust: '38',
     avgCookieSale: 2.3,
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
     getRandomInt4: function() {
         return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
@@ -109,6 +115,8 @@ const sales5 = {
     minCust: '2',
     maxCust: '16',
     avgCookieSale: 4.6,
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
     getRandomInt5: function() {
         return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
