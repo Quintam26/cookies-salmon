@@ -14,17 +14,17 @@ const sales = {
     maxCust: '65',
     avgCookieSale: '6.3',
     cookiesArray: [],
-    time: ['6am:','7am:','8am:','9am:','10am:','11am:','12pm:','1pm:','2pm:','3pm:','4pm:','5pm:','6pm:','7pm:','8pm:', 'Total:'],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
 
     getRandomCookies: function() {
         for (let i = 0; i < 15; i++) {
             const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-            console.log(custPerHour);
+            // console.log(custPerHour);
             const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
-            console.log(cookiePerHour);
+            //console.log(cookiePerHour);
             this.cookiesArray.push(cookiePerHour);
-            console.log(this.time);
+            //console.log(this.time);
         }
     },
 
@@ -32,7 +32,7 @@ const sales = {
         let totalCookies = 0;
         for (let i = 0; i < this.cookiesArray.length; i++) {
             totalCookies += this.cookiesArray[i];
-            console.log('this total cookies', totalCookies);
+            //console.log('this total cookies', totalCookies);
             
         }
         this.cookiesArray.push(totalCookies);
@@ -41,10 +41,10 @@ const sales = {
 
     createCookiesList: function(){
         for (let i = 0; i < this.cookiesArray.length; i++) {
-            const parent = document.getElementById('parent');
-            const list = document.createElement('li');
-            list.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
-            parent.appendChild(list);
+            const list = document.getElementById('PDX Airport');
+            const li = document.createElement('li');
+            li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+            list.appendChild(li);
         /* console.log(list);
             console.log(this.cookiesArray);
             console.log(i); */
