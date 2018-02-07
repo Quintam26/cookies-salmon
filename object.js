@@ -6,8 +6,8 @@ function Sale(Location, minCust, maxCust, avgCookieSale, cookiesArray, time) {
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.avgCookieSale = avgCookieSale;
-    this.cookiesArray = cookiesArray;
-    this.time = time;
+    this.cookiesArray = [];
+    this.time = [];
 }
 Sale.prototype.getRandomCookies = function() {
     for (let i = 0; i < 15; i++) {
