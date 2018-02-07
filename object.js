@@ -68,9 +68,34 @@ const sales2 = {
     cookiesArray: [],
     time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
-    getRandomInt2: function() {
-        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+
+    getRandomCookie: function() {
+        for(let i = 0; this.cookiesArray.length; i++) {
+            const custPerHour = Math.floor( Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+            const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+            this.cookiesArray.push(cookiePerHour);
+
+        }
+    },
+
+    cookiesPerDay: function() {
+        let totalCookies = 0;
+        for(let i = 0; i < this.cookiesArray.length; i++) {
+            totalCookies += this.cookiesArray[i];
+
+        }
+
+        this.cookiesArray.push(totalCookies);
+
+    },
+
+    createCookiesList: function() {
+        for(let i = 0; i < this.cookiesArray.length; i++)
+            const list = document.getElementById
+
+
     }
+
 };
 
 //sales2.getRandomInt2();
@@ -85,7 +110,8 @@ const sales3 = {
     time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
     getRandomInt3: function() {
-        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
+        for(let i = 0; i < this.cookiesArray.length; i++)
+        (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
     }
 
 };
