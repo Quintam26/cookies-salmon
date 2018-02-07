@@ -28,7 +28,7 @@ const sales = {
         }
     },
 
-    cookiesPerDay: function(){
+    cookiesPerDay: function() {
         let totalCookies = 0;
         for (let i = 0; i < this.cookiesArray.length; i++) {
             totalCookies += this.cookiesArray[i];
@@ -39,7 +39,7 @@ const sales = {
 
     },
 
-    createCookiesList: function(){
+    createCookiesList: function() {
         for (let i = 0; i < this.cookiesArray.length; i++) {
             const list = document.getElementById('PDX Airport');
             const li = document.createElement('li');
@@ -57,20 +57,18 @@ sales.getRandomCookies();
 sales.cookiesPerDay();
 sales.createCookiesList();
 
-
-
 const sales2 = {
 //properties
     Location: 'Pioneer Square',
     minCust: '3',
     maxCust: '24',
-    avgCookieSale: 1.2,
+    avgCookieSale: '1.2',
     cookiesArray: [],
     time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
 
-    getRandomCookie: function() {
-        for(let i = 0; this.cookiesArray.length; i++) {
+    getRandomCookies2: function() {
+        for (let i = 0; i < 15; i++) {
             const custPerHour = Math.floor( Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
             const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
             this.cookiesArray.push(cookiePerHour);
@@ -80,7 +78,7 @@ const sales2 = {
 
     cookiesPerDay: function() {
         let totalCookies = 0;
-        for(let i = 0; i < this.cookiesArray.length; i++) {
+        for (let i = 0; i < this.cookiesArray.length; i++) {
             totalCookies += this.cookiesArray[i];
 
         }
@@ -90,15 +88,20 @@ const sales2 = {
     },
 
     createCookiesList: function() {
-        for(let i = 0; i < this.cookiesArray.length; i++)
-            const list = document.getElementById
+        for (let i = 0; i < this.cookiesArray.length; i++) {
+            const list = document.getElementById('Pioneer Square');
+            const li = document.createElement('li');
+            li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+            list.appendChild(li);
 
-
-    }
+        }
+    },
 
 };
 
-//sales2.getRandomInt2();
+sales2.getRandomCookies2();
+sales2.cookiesPerDay();
+sales2.createCookiesList();
 
 const sales3 = {
 //porperties
@@ -109,16 +112,39 @@ const sales3 = {
     cookiesArray: [],
     time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
-    getRandomInt3: function() {
-        for(let i = 0; i < this.cookiesArray.length; i++)
-        (Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    }
+    getRandomCookies3: function() {
+        for(let i = 0; i < 15 ; i++) {
+            const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+            const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+            this.cookiesArray.push(cookiePerHour);
+        }
+    },
 
+    cookiesPerDay: function() {
+        let totalCookies = 0;
+        for(let i = 0; i < this.cookiesArray.length; i++) {
+            totalCookies += this.cookiesArray[i];
+
+        }
+        this.cookiesArray.push(totalCookies);
+    },
+
+    createCookiesList: function() {
+        for (let i = 0; i < this.cookiesArray.length; i++) {
+            const list = document.getElementById ('Powells');
+            const li = document.createElement('li');
+            li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+            list.appendChild(li);
+       
+        }
+    }
 };
 
-//sales3.getRandomInt3();
+sales3.getRandomCookies3();
+sales3.cookiesPerDay();
+sales3.createCookiesList();
 
-const sales4 = {
+/*-const sales4 = {
 //properties
     Location: 'St. John\'s',
     minCust: '20',
@@ -152,4 +178,4 @@ const sales5 = {
 
 //sales5.getRandomInt5();
 
-
+*/
