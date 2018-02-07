@@ -1,11 +1,20 @@
 'use strict';
 
-/*
-Sales
 
--The minimum number of customers per hour.
--The maximum number of customers per hour.
--The average number of cookies purchased per customer.*/
+function Sale(Location, minCust, maxCust, avgCookieSale, cookiesArray, time) {
+    this.Location = Location;
+    this.minCust = minCust;
+    this.maxCust = maxCust;
+    this.avgCookieSale = avgCookieSale;
+    this.cookiesArray = cookiesArray;
+    this.time = time;
+}
+
+let i = 0;
+const sale = new Sale ('PDX Airport', '23', '65', '6.3', '[i]', [i]);
+console.log(sale);
+
+/*
 
 const sales = {
 //properties
@@ -45,9 +54,6 @@ const sales = {
             const li = document.createElement('li');
             li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
             list.appendChild(li);
-        /* console.log(list);
-            console.log(this.cookiesArray);
-            console.log(i); */
 
         }
     },
@@ -226,5 +232,5 @@ sales5.getRandomCookies5();
 sales5.cookiesPerDay();
 sales5.createCookiesList();
 
-
+*/
 
