@@ -1,14 +1,16 @@
 'use strict';
 
 
-function Sale(Location, minCust, maxCust, avgCookieSale, cookiesArray, time) {
+function Sale(Location, minCust, maxCust, avgCookieSale) {
     this.Location = Location;
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.avgCookieSale = avgCookieSale;
     this.cookiesArray = [];
     this.time = [];
-}
+};
+//methods
+
 Sale.prototype.getRandomCookies = function() {
     for (let i = 0; i < 15; i++) {
         const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
@@ -18,7 +20,27 @@ Sale.prototype.getRandomCookies = function() {
     }
 };
 
-const sale = new Sale ('PDX Airport', '23', '65', '6.3', this.cookiesArray, this.time );
+Sale.prototype.cookiesPerday = function() {
+    let totalCookies = 0;
+    for(let i = 0; i < this.cookiesArray.length; i++) {
+        totalCookies += this.cookiesArray[i];
+
+    }
+    this.cookiesArray.push(totalCookies);
+
+};
+
+Sale.prototype.createCookiesList = function() {
+    for(let i = 0; i < this.cookiesArray.length; i++) {
+        const list = document.getElementById('id');
+        const li = document.createElement('li');
+        li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+        list.appendChild(li);
+    }
+};
+
+
+const sale = new Sale ('PDX Airport', '23', '65', '6.3');
 console.log(sale);
 
 /*
