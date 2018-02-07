@@ -1,15 +1,16 @@
 'use strict';
 
 
-function Sale(Location, minCust, maxCust, avgCookieSale, cookiesArray, time, id) {
+function Sale(Location, minCust, maxCust, avgCookieSale, parentId) {
     this.Location = Location;
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.avgCookieSale = avgCookieSale;
+    this.parentId = parentId;
     this.cookiesArray = [];
-    this.time = [];
-    this.id = id;
-};
+    this.time = ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '];
+
+}
 //methods
 
 Sale.prototype.getRandomCookies = function() {
@@ -17,7 +18,7 @@ Sale.prototype.getRandomCookies = function() {
         const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
         const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
         this.cookiesArray.push(cookiePerHour);
-        return this.cookiesArray[i];
+
     }
 };
 
@@ -33,7 +34,7 @@ Sale.prototype.cookiesPerday = function() {
 
 Sale.prototype.createCookiesList = function() {
     for(let i = 0; i < this.cookiesArray.length; i++) {
-        const list = document.getElementById('id');
+        const list = document.getElementById(this.parentId);
         const li = document.createElement('li');
         li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
         list.appendChild(li);
@@ -41,9 +42,11 @@ Sale.prototype.createCookiesList = function() {
 };
 
 
-const sale = new Sale ('PDX Airport', '23', '65', '6.3', [], [], 'pdx airport');
+const sale = new Sale ('PDX Airport', '23', '65', '6.3', 'pdx airport');
+sale.getRandomCookies();
+sale.cookiesPerday();
+sale.createCookiesList();
 console.log(sale);
-
 /*
 
 const sales = {
