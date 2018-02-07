@@ -9,9 +9,16 @@ function Sale(Location, minCust, maxCust, avgCookieSale, cookiesArray, time) {
     this.cookiesArray = cookiesArray;
     this.time = time;
 }
+Sale.prototype.getRandomCookies = function() {
+    for (let i = 0; i < 15; i++) {
+        const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+        const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+        this.cookiesArray.push(cookiePerHour);
+        return this.cookiesArray[i];
+    }
+};
 
-let i = 0;
-const sale = new Sale ('PDX Airport', '23', '65', '6.3', '[i]', [i]);
+const sale = new Sale ('PDX Airport', '23', '65', '6.3', this.cookiesArray, this.time );
 console.log(sale);
 
 /*
