@@ -18,14 +18,13 @@ const sales = {
     //methods
 
     getRandomCookies: function() {
-        let i = 0;
-        for (i = 0; i < 15; i++);{
+        for (let i = 0; i < 15; i++) {
             const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
             console.log(custPerHour);
             const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
             console.log(cookiePerHour);
             this.cookiesArray.push(cookiePerHour);
-            console.log(this.time[2]);
+            console.log(this.time);
         }
     },
 
@@ -38,13 +37,15 @@ const sales = {
     }*/
 
     createCookiesList: function(){
-        let i = 0;
-        for (i = 0; i < 15; i++);{
+        for (let i = 0; i < 15; i++) {
             const parent = document.getElementById('parent');
             const list = document.createElement('li');
-            list.textContent = this.time[i] + this.cookiePerHour[i];
+            list.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
             parent.appendChild(list);
             console.log(list);
+            console.log(this.cookiesArray);
+            console.log(i);
+
 
         }
     }
