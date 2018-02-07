@@ -28,7 +28,7 @@ const sales = {
         }
     },
 
-    cookiesPerDay: function(){
+    cookiesPerDay: function() {
         let totalCookies = 0;
         for (let i = 0; i < this.cookiesArray.length; i++) {
             totalCookies += this.cookiesArray[i];
@@ -39,7 +39,7 @@ const sales = {
 
     },
 
-    createCookiesList: function(){
+    createCookiesList: function() {
         for (let i = 0; i < this.cookiesArray.length; i++) {
             const list = document.getElementById('PDX Airport');
             const li = document.createElement('li');
@@ -50,28 +50,57 @@ const sales = {
             console.log(i); */
 
         }
-    }
+    },
 };
 
 sales.getRandomCookies();
 sales.cookiesPerDay();
 sales.createCookiesList();
 
-
-
 const sales2 = {
 //properties
     Location: 'Pioneer Square',
     minCust: '3',
     maxCust: '24',
-    avgCookieSale: 1.2,
+    avgCookieSale: '1.2',
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
-    getRandomInt2: function() {
-        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    }
+
+    getRandomCookies2: function() {
+        for (let i = 0; i < 15; i++) {
+            const custPerHour = Math.floor( Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+            const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+            this.cookiesArray.push(cookiePerHour);
+
+        }
+    },
+
+    cookiesPerDay: function() {
+        let totalCookies = 0;
+        for (let i = 0; i < this.cookiesArray.length; i++) {
+            totalCookies += this.cookiesArray[i];
+
+        }
+        this.cookiesArray.push(totalCookies);
+
+    },
+
+    createCookiesList: function() {
+        for (let i = 0; i < this.cookiesArray.length; i++) {
+            const list = document.getElementById('Pioneer Square');
+            const li = document.createElement('li');
+            li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+            list.appendChild(li);
+
+        }
+    },
+
 };
 
-//sales2.getRandomInt2();
+sales2.getRandomCookies2();
+sales2.cookiesPerDay();
+sales2.createCookiesList();
 
 const sales3 = {
 //porperties
@@ -79,14 +108,40 @@ const sales3 = {
     minCust: '11',
     maxCust: '38',
     avgCookieSale: 3.7,
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
-    getRandomInt3: function() {
-        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    }
+    getRandomCookies3: function() {
+        for(let i = 0; i < 15 ; i++) {
+            const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+            const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+            this.cookiesArray.push(cookiePerHour);
+        }
+    },
 
+    cookiesPerDay: function() {
+        let totalCookies = 0;
+        for(let i = 0; i < this.cookiesArray.length; i++) {
+            totalCookies += this.cookiesArray[i];
+
+        }
+        this.cookiesArray.push(totalCookies);
+    },
+
+    createCookiesList: function() {
+        for (let i = 0; i < this.cookiesArray.length; i++) {
+            const list = document.getElementById ('Powells');
+            const li = document.createElement('li');
+            li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+            list.appendChild(li);
+
+        }
+    },
 };
 
-//sales3.getRandomInt3();
+sales3.getRandomCookies3();
+sales3.cookiesPerDay();
+sales3.createCookiesList();
 
 const sales4 = {
 //properties
@@ -94,14 +149,39 @@ const sales4 = {
     minCust: '20',
     maxCust: '38',
     avgCookieSale: 2.3,
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
-    getRandomInt4: function() {
-        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    }
+    getRandomCookies4: function() {
+        for(let i = 0; i < 15; i++) {
+            const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+            const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+            this.cookiesArray.push(cookiePerHour);
+        }
+    },
 
+    cookiesPerDay: function(){
+        let totalCookies = 0;
+        for(let i = 0; i < this.cookiesArray.length; i++) {
+            totalCookies += this.cookiesArray[i];
+        }
+        this.cookiesArray.push(totalCookies);
+    },
+
+    createCookiesList: function(){
+        for(let i = 0; i < this.cookiesArray.length; i++) {
+            const list = document.getElementById('St. Johns');
+            const li = document.createElement('li');
+            li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+            list.appendChild(li);
+        }
+
+    },
 };
 
-//sales4.getRandomInt4 ();
+sales4.getRandomCookies4 ();
+sales4.cookiesPerDay();
+sales4.createCookiesList();
 
 const sales5 = {
 //properties
@@ -109,13 +189,42 @@ const sales5 = {
     minCust: '2',
     maxCust: '16',
     avgCookieSale: 4.6,
+    cookiesArray: [],
+    time: ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '],
     //methods
-    getRandomInt5: function() {
-        return console.log(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
-    }
+    getRandomCookies5: function() {
+        for(let i = 0; i < 15; i++) {
+            const custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+            const cookiePerHour = Math.round(this.avgCookieSale * custPerHour);
+            this.cookiesArray.push(cookiePerHour);
 
+        }
+    },
+
+    cookiesPerDay: function(){
+        let totalCookies = 0;
+        for(let i = 0; i < this.cookiesArray.length; i++) {
+            totalCookies += this.cookiesArray[i];
+
+        }
+        this.cookiesArray.push(totalCookies);
+    },
+
+    createCookiesList: function(){
+        for(let i = 0; i < this.cookiesArray.length; i ++) {
+            const list = document.getElementById('Waterfront');
+            const li = document.createElement('li');
+            li.textContent = this.time[i] + this.cookiesArray[i] + ' cookies';
+            list.appendChild(li);
+
+        }
+
+    }
 };
 
-//sales5.getRandomInt5();
+sales5.getRandomCookies5();
+sales5.cookiesPerDay();
+sales5.createCookiesList();
+
 
 
