@@ -46,9 +46,31 @@ const sale = new Sale ('PDX Airport', '23', '65', '6.3', 'pdx airport');
 sale.getRandomCookies();
 sale.cookiesPerday();
 sale.createCookiesList();
-console.log(sale);
-/*
 
+const sale2 = new Sale ('Pionner Square', '3', '24', '1.6', 'pioneer square');
+sale2.getRandomCookies();
+sale2.cookiesPerday();
+sale2.createCookiesList();
+
+const sale3 = new Sale ('Powell\'s', '11', '38', '3.7', 'powell\'s');
+sale3.getRandomCookies();
+sale3.cookiesPerday();
+sale3.createCookiesList();
+
+const sale4 = new Sale ('St. John\'s', '20', '38', '2.3', 'st. john\'s');
+sale4.getRandomCookies();
+sale4.cookiesPerday();
+sale4.createCookiesList();
+
+const sale5 = new Sale ('Waterfront', '2', '16', '4.6', 'waterfront');
+sale5.getRandomCookies();
+sale5.cookiesPerday();
+sale5.createCookiesList();
+
+
+
+
+/*
 const sales = {
 //properties
     Location: 'PDX Airport',
