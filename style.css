@@ -1,0 +1,21 @@
+table {
+        border: solid black 2pt;
+        background-color: rgb(131, 2, 2);
+        position: relative; left: 370px;        
+       
+}   
+
+td  {
+     border: solid black 2pt;
+     background-color: rgb(252, 198, 198);  
+}
+
+th  {
+    border: solid black 1pt;
+    color: white;  
+}
+
+label {
+    margin: 20pt;
+
+}
