@@ -1,6 +1,5 @@
 'use strict';
 
-
 function Sale(Location, minCust, maxCust, avgCookieSale, parentId) {
     this.Location = Location;
     this.minCust = minCust;
@@ -41,7 +40,20 @@ Sale.prototype.cookiesPerday = function() {
     }
 };
 */
-Sale.prototype.createCookiesRow = function() {
+
+Sale.prototype.createCookiesTableHead = function() {
+    const table = document.querySelector('#place');
+    const tr = document.createElement('tr');
+    table.appendChild(tr);
+    for(let i = 0; i < this.time.length; i++) {
+        const th = document.createElement('th');
+        th.textContent = this.time[i];
+        tr.appendChild(th);
+
+    }
+};
+
+Sale.prototype.createCookiesTable = function() {
     const table = document.querySelector('#place');
     const tr = document.createElement('tr');
     table.appendChild(tr);
@@ -56,36 +68,35 @@ Sale.prototype.createCookiesRow = function() {
 const sale = new Sale ('PDX Airport', '23', '65', '6.3', 'pdx airport');
 sale.getRandomCookies();
 sale.cookiesPerday();
-sale.createCookiesRow();
+sale.createCookiesTableHead();
+sale.createCookiesTable();
+
 //sale.createCookiesList();
 
 
 const sale2 = new Sale ('Pionner Square', '3', '24', '1.6', 'pioneer square');
 sale2.getRandomCookies();
 sale2.cookiesPerday();
-sale2.createCookiesRow();
+sale2.createCookiesTable();
 //sale2.createCookiesList();
 
 const sale3 = new Sale ('Powell\'s', '11', '38', '3.7', 'powell\'s');
 sale3.getRandomCookies();
 sale3.cookiesPerday();
-sale3.createCookiesRow();
+sale3.createCookiesTable();
 //sale3.createCookiesList();
 
 const sale4 = new Sale ('St. John\'s', '20', '38', '2.3', 'st. john\'s');
 sale4.getRandomCookies();
 sale4.cookiesPerday();
-sale4.createCookiesRow();
+sale4.createCookiesTable();
 //sale4.createCookiesList();
 
 const sale5 = new Sale ('Waterfront', '2', '16', '4.6', 'waterfront');
 sale5.getRandomCookies();
 sale5.cookiesPerday();
-sale5.createCookiesRow();
+sale5.createCookiesTable();
 //sale5.createCookiesList();
-
-
-
 
 /*
 const sales = {
@@ -303,6 +314,5 @@ const sales5 = {
 sales5.getRandomCookies5();
 sales5.cookiesPerDay();
 sales5.createCookiesList();
-
 */
 
