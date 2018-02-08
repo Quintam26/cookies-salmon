@@ -1,3 +1,11 @@
+
+img {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 80pt;
+}
+
 table {
         border: solid black 2pt;
         border-radius: 1em;
