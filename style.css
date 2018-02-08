@@ -1,7 +1,8 @@
 table {
         border: solid black 2pt;
         background-color: rgb(131, 2, 2);
-        position: relative; left: 400pt;        
+        width:800pt;
+        position: relative; left: 280pt;        
        
 }   
 
@@ -15,7 +16,23 @@ th  {
     color: white;  
 }
 
-label {
-    margin: 20pt;
+form {
+   margin: 10pt;
+   padding: 20pt;
+   width: 800pt;
+   position: relative; left: 250pt; 
+   border: solid rgb(131, 2, 2) 2pt;
+   background-color: rgb(252, 198, 198);
+}
 
+label   {
+    margin: 10pt; 
+    display: flex;
+    justify-content: center;
+
+}
+
+p {
+    display: flex;
+    justify-content: center;
 }
