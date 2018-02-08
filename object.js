@@ -41,18 +41,6 @@ Sale.prototype.cookiesPerday = function() {
 };
 */
 
-Sale.prototype.createCookiesTableHead = function() {
-    const table = document.querySelector('#place');
-    const tr = document.createElement('tr');
-    table.appendChild(tr);
-    for(let i = 0; i < this.time.length; i++) {
-        const th = document.createElement('th');
-        th.textContent = this.time[i];
-        tr.appendChild(th);
-
-    }
-};
-
 Sale.prototype.createCookiesTable = function() {
     const table = document.querySelector('#place');
     const tr = document.createElement('tr');
@@ -61,6 +49,18 @@ Sale.prototype.createCookiesTable = function() {
         const td = document.createElement('td');
         td.textContent = this.cookiesArray[i];
         tr.appendChild(td);
+
+    }
+};
+
+Sale.prototype.createCookiesTableHead = function() {
+    const table = document.querySelector('#place');
+    const tr = document.createElement('tr');
+    table.appendChild(tr);
+    for(let i = 0; i < this.time.length; i++) {
+        const th = document.createElement('th');
+        th.textContent = this.time[i];
+        tr.appendChild(th);
 
     }
 };
