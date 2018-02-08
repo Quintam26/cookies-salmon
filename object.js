@@ -7,7 +7,7 @@ function Sale(Location, minCust, maxCust, avgCookieSale, parentId) {
     this.avgCookieSale = avgCookieSale;
     this.parentId = parentId;
     this.cookiesArray = [];
-    this.time = ['6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '];
+    this.time = ['', '6am: ','7am: ','8am: ','9am: ','10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: ','6pm: ','7pm: ','8pm: ', 'Total: '];
 
 }
 //methods
@@ -35,6 +35,9 @@ Sale.prototype.createCookiesTable = function() {
     const table = document.querySelector('#place');
     const tr = document.createElement('tr');
     table.appendChild(tr);
+    const storeName = document.createElement('td');
+    storeName.textContent = this.Location;
+    tr.appendChild(storeName);
     for(let i = 0; i < this.cookiesArray.length; i++) {
         const td = document.createElement('td');
         td.textContent = this.cookiesArray[i];
@@ -54,6 +57,13 @@ Sale.prototype.createCookiesTableHead = function() {
 
     }
 };
+
+
+
+const form = document.querySelector('form');
+form.addEventListener('submit', function() {
+
+});
 
 const sale = new Sale ('PDX Airport', '23', '65', '6.3', 'pdx airport');
 sale.getRandomCookies();

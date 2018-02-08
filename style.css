@@ -1,14 +1,16 @@
 table {
         border: solid black 2pt;
-        background-color: rgb(131, 2, 2);
-        width:800pt;
+        border-radius: 1em;
+        background-color: rgb(2, 47, 131);
+        width: 800pt;
+        height: 200pt;
         position: relative; left: 280pt;        
        
 }   
 
 td  {
      border: solid black 2pt;
-     background-color: rgb(252, 198, 198);  
+     background-color: rgb(143, 204, 204);  
 }
 
 th  {
@@ -20,13 +22,14 @@ form {
    margin: 10pt;
    padding: 20pt;
    width: 800pt;
+   border-radius: 1em;
    position: relative; left: 250pt; 
-   border: solid rgb(131, 2, 2) 2pt;
-   background-color: rgb(252, 198, 198);
+   border: solid rgb(2, 47, 131) 2pt;
+   background-color: rgb(143, 204, 204);
 }
 
-label   {
-    margin: 10pt; 
+label, button   {
+    margin: 20pt; 
     display: flex;
     justify-content: center;
 
