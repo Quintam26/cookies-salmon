@@ -41,31 +41,42 @@ Sale.prototype.createCookiesList = function() {
     }
 };
 
+Sale.prototype.createCookiesRow = function() {
+    for(let i = 0; i < this.cookiesArray.length; i++) {
+        const table = document.querySelector('#place');
+        const tr = document.createElement('tr');
+        const td = document.createElement('td');
+        tr.appendChild(td);
+        table.appendChild(tr);
+
+    }
+};
 
 const sale = new Sale ('PDX Airport', '23', '65', '6.3', 'pdx airport');
 sale.getRandomCookies();
 sale.cookiesPerday();
 sale.createCookiesList();
+sale.createCookiesRow();
 
 const sale2 = new Sale ('Pionner Square', '3', '24', '1.6', 'pioneer square');
 sale2.getRandomCookies();
 sale2.cookiesPerday();
-sale2.createCookiesList();
+//sale2.createCookiesList();
 
 const sale3 = new Sale ('Powell\'s', '11', '38', '3.7', 'powell\'s');
 sale3.getRandomCookies();
 sale3.cookiesPerday();
-sale3.createCookiesList();
+//sale3.createCookiesList();
 
 const sale4 = new Sale ('St. John\'s', '20', '38', '2.3', 'st. john\'s');
 sale4.getRandomCookies();
 sale4.cookiesPerday();
-sale4.createCookiesList();
+//sale4.createCookiesList();
 
 const sale5 = new Sale ('Waterfront', '2', '16', '4.6', 'waterfront');
 sale5.getRandomCookies();
 sale5.cookiesPerday();
-sale5.createCookiesList();
+//sale5.createCookiesList();
 
 
 
