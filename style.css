@@ -1,6 +1,6 @@
 h1 {
-    display: block;
-    margin: 0 auto;
+    text-align: center;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 img {
@@ -34,6 +34,7 @@ th  {
     border-radius: .5em;
     border: solid black 1pt;
     color: white; 
+    
 }
 
 form {
@@ -50,7 +51,8 @@ label  {
     display: inline-grid;
     margin: 10pt;
     vertical-align: middle;
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
 button {
