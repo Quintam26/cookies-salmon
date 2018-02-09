@@ -62,6 +62,26 @@ Sale.prototype.createCookiesTableHead = function() {
 
 const form = document.querySelector('form');
 form.addEventListener('submit', function() {
+    event.preventDefault();
+
+const newStore = this.store.value;
+    console.log('New store is called: ' + this.store.value);
+
+const miCust = this.minCustomers.value;
+    console.log('The minimum number of customers is: ' + this.minCustomers.value);
+
+const maCust = this.maxCustomers.value;
+    console.log('The maximum number of customers is: ' + this.maxCustomers.value);
+
+const avCookies = this.averageC.value;
+    console.log('The average cookies sale is: ' + this.averageC.value);
+
+
+
+
+ 
+
+
 
 });
 
