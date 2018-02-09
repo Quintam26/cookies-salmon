@@ -1,4 +1,5 @@
 
+
 img {
     display: block;
     margin: 0 auto;
@@ -17,12 +18,14 @@ table {
 }   
 
 td  {
+     border-radius: 1em;
      border: solid black 2pt;
      background-color: rgb(143, 204, 204);  
 }
 
 th  {
-    border: solid black 1pt;
+    border-radius: 1em;
+    border: none;
     color: white;  
 }
 
