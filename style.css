@@ -1,0 +1,52 @@
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 80pt;
+}
+
+table {
+        border: solid black 2pt;
+        border-radius: 1em;
+        background-color: rgb(2, 47, 131);
+        width: 800pt;
+        height: 200pt;
+        position: relative; left: 280pt;        
+       
+}   
+
+td  {
+     border-radius: 1em;
+     border: solid black 2pt;
+     background-color: rgb(143, 204, 204);  
+}
+
+th  {
+    border-radius: 1em;
+    border: none;
+    color: white;  
+}
+
+form {
+   margin: 10pt;
+   padding: 20pt;
+   width: 800pt;
+   border-radius: 1em;
+   position: relative; left: 250pt; 
+   border: solid rgb(2, 47, 131) 2pt;
+   background-color: rgb(143, 204, 204);
+}
+
+label, button   {
+    margin: 20pt; 
+    display: flex;
+    justify-content: center;
+
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}

@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pat's Salmon Cookies</title>
+        <title>Cookies Table</title>
+        <link rel="stylesheet" href="style.css">
     </head>
+
     <body> 
+
+        <h1>Pat's Salmon Cookeis</h1>
+
+            <hr>
+            
+        <section>
+
+            <img src = 'https://raw.githubusercontent.com/alchemy-bootcamp-one-winter-2018/lectures/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png' alt= 'fish'>
+
+        </section>
+   
         <section>
             
             <article>
-            <img src = 'https://raw.githubusercontent.com/alchemy-bootcamp-one-winter-2018/lectures/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png' alt= 'fish'>
+
+                <table id = "place"></table>
+
             </article>
+
+        </section>
+      
+        <section>
             
             <article>
-            <ul id = 'PDX Airport'>
-            </ul>
-            <br>
-            <ul id = 'Pioneer Square'>
-            </ul>
-            <br>
-            <ul id = 'Powells'>    
-            </ul>
-            <br>
-            <ul id = 'St. Johns'>     
-            </ul>
-            <br>
-            <ul id = 'Waterfront'>      
-            </ul>
-            </article>
-        </section>
-        <script src = 'object.js'></script>
 
+                <form>
+                 <fieldset>
+                    <legend>New Store</legend>
+                        
+                        <label for= "store">Store<input type="text" id="store" name="name"></label>
+                        
+                        <labelfor for ="minCustomers">Min Customers Expected<input type="text" id="minCustomers" name="name"></label>
+                     
+                        <labelfor for ="maxCustomers">Max Customers Expected<input type="text" id="maxCustomers" name="name"></label>
+            
+                        <labelfor for="averageC">Average Cookie Sales<input type="text" id="averageC" name="name"></label>
+                        
+                        <button type="submit">Submit</button>
+                   
+                    </fieldset>
+                </form>
+
+            </article>   
+
+        </section>
+
+            <script src = 'object.js'></script>
+
+            </body>
     </body>
 </html>
