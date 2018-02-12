@@ -17,7 +17,7 @@ h1 {
 
 nav {
     position: relative;
-    left: 750px;
+    left: 810px;
 }
 
 li {
@@ -30,18 +30,26 @@ li {
 
 }
 
+#fam {
+    display: block;
+    margin: 0 auto;
+    border: solid white 5pt;
+    border-radius: .5em;
+}
+
 h2 {
     font-family: 'Open Sans', sans-serif;
     color: white;
+    width: 10%;
     background-color: rgb(2, 47, 131);
     border-radius: .5em;
-    display: block;
+    text-align: center;
 
 }
 p {
     font-family: 'Open Sans', sans-serif;
     color: white;
-    border-radius: .5em;
-    display: inline;
-
+    text-indent: 5em;
+    width: 25%;
+    margin: 0 auto;
 }
