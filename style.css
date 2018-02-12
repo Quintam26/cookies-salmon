@@ -3,6 +3,7 @@ body {
 }
 
 h1 {
+    border: solid white 2pt;
     color: white;
     width: 40%;
     display: block;

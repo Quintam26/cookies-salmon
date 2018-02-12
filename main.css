@@ -10,6 +10,7 @@ h1 {
     display: block;
     margin: 0 auto;
     border-radius: .5em;
+    border: solid white 2pt;
     text-align: center;
     background-color: rgb(2, 47, 131);
     font-family: 'Rubik Mono One', sans-serif;
@@ -21,6 +22,7 @@ nav {
 }
 
 li {
+    border: solid white 1pt;
     font-family: 'Open Sans', sans-serif;
     color: white;
     background-color: rgb(2, 47, 131);
@@ -30,7 +32,7 @@ li {
 
 }
 
-#fam {
+#fam, #fish, #tshirt, #cutter {
     display: block;
     margin: 0 auto;
     border: solid white 5pt;
@@ -38,18 +40,29 @@ li {
 }
 
 h2 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik Mono One', sans-serif;
     color: white;
-    width: 10%;
+    width: 15%;
     background-color: rgb(2, 47, 131);
     border-radius: .5em;
     text-align: center;
+    border: solid white 1pt;
+    display: block;
+    margin: 0 auto;
 
 }
+
+image {
+    display: block;
+    margin: 0 auto;
+}
+
 p {
     font-family: 'Open Sans', sans-serif;
     color: white;
-    text-indent: 5em;
+    text-indent: 2em;
     width: 25%;
+    display: block;
     margin: 0 auto;
+  
 }
