@@ -17,7 +17,7 @@ img {
     background-image: url(http://tmiaquatics.com/wp-content/uploads/2017/02/facts-about-water.jpg);
     display: block;
     margin: 0 auto;
-    border: solid black 5pt;
+    border: solid  white 5pt;
     border-radius: .5em;
     padding: 80pt;
 }
@@ -37,7 +37,8 @@ td  {
 
      border-radius: .5em;
      border: solid black 2pt;
-     background-color: rgb(143, 204, 204);  
+     background-color: rgb(143, 204, 204);
+     
 }
 
 th  {

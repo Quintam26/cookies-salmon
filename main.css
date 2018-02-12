@@ -29,3 +29,19 @@ li {
     list-style: none;
 
 }
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background-color: rgb(2, 47, 131);
+    border-radius: .5em;
+    display: block;
+
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border-radius: .5em;
+    display: inline;
+
+}
