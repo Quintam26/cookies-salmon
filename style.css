@@ -1,13 +1,19 @@
+body {
+    background-color: rgb(131, 2, 2);
+}
+
 h1 {
+    color: antiquewhite;
     text-align: center;
     font-family: 'Rubik Mono One', sans-serif;
 }
 
 img {
-
+    background-image: url(http://tmiaquatics.com/wp-content/uploads/2017/02/facts-about-water.jpg);
     display: block;
     margin: 0 auto;
     border: none;
+    border-radius: .5em;
     padding: 80pt;
 }
 
@@ -45,6 +51,10 @@ form {
     border-radius: 1em;
     border: solid rgb(2, 47, 131) 2pt;
     background-color: rgb(143, 204, 204);
+}
+
+legend {
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 label  {
