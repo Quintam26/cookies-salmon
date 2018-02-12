@@ -32,6 +32,22 @@ li {
 
 }
 
+#fr{
+    border: solid white 5pt;
+    border-radius: .5em;
+    position: relative;
+    left: 1125pt;
+    bottom: 850pt;
+}
+
+#cooky{
+    border: solid white 5pt;
+    border-radius: .5em;
+    position: relative;
+    right: 150pt;
+    bottom: 850pt;
+}
+
 #fam, #fish, #tshirt, #cutter {
     display: block;
     margin: 0 auto;
@@ -51,6 +67,16 @@ h2 {
     margin: 0 auto;
 
 }
+a[href="#Merchandise"] {
+    color: white;
+    text-decoration: none;
+    }
+
+a[href="#Cookies"] {
+    color: white;
+    text-decoration: none;
+    }
+    
 
 image {
     display: block;
