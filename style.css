@@ -3,8 +3,13 @@ body {
 }
 
 h1 {
-    color: antiquewhite;
+    color: white;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    border-radius: .5em;
     text-align: center;
+    background-color: rgb(2, 47, 131);
     font-family: 'Rubik Mono One', sans-serif;
 }
 
@@ -12,7 +17,7 @@ img {
     background-image: url(http://tmiaquatics.com/wp-content/uploads/2017/02/facts-about-water.jpg);
     display: block;
     margin: 0 auto;
-    border: none;
+    border: solid black 5pt;
     border-radius: .5em;
     padding: 80pt;
 }
@@ -22,8 +27,8 @@ table {
         border: solid black 2pt;
         border-radius: 1em;
         background-color: rgb(2, 47, 131);
-        width: 840pt;
-        height: 200pt;
+        width: 940pt;
+        height: 300pt;
         margin: 0 auto;      
        
 }   
@@ -47,7 +52,7 @@ form {
     margin: 0 auto;
     border: none;
     padding: 20pt;
-    width: 800pt;
+    width: 900pt;
     border-radius: 1em;
     border: solid rgb(2, 47, 131) 2pt;
     background-color: rgb(143, 204, 204);
@@ -69,4 +74,5 @@ button {
     margin: 50pt;
     position: relative;
     top: 7.5pt;
+    font-family: 'Open Sans', sans-serif;
 }
